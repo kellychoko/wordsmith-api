@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage("init"){
+            steps{
+                script {
+                    git branch: 'main', credential: 'github',url: 'https://github.com/kellychoko/wordsmith-api-chart.git'
+                }
+            }
+        }
+    }
+}
